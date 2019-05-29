@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "example.rajesh.mvvmpattern"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.appCompat"
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintLayout"
+    testImplementation "junit:junit:$rootProject.ext.junit"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.ext.runner"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoCore"
+
+    //    architecture components
+    implementation "android.arch.lifecycle:extensions:$rootProject.ext.components"
+    implementation "android.arch.lifecycle:viewmodel:$rootProject.ext.components"
+    implementation "android.arch.lifecycle:livedata:$rootProject.ext.components"
+
+    //  Retrofit & moshi
+    implementation "com.squareup.moshi:moshi-kotlin:$rootProject.ext.moshiKotlin"
+    implementation "com.squareup.moshi:moshi-adapters:$rootProject.ext.moshiKotlin"
+    implementation "com.squareup.retrofit2:converter-moshi:$rootProject.ext.moshiConverter"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.loggingInterceptor"
+}

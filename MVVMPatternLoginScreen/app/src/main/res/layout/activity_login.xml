@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.ambab.parkr.features.login.LoginActivity">
+
+
+    <android.support.constraint.Guideline
+            android:id="@+id/logoIvTopGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.13"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/logoIvStartGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.42"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/logoIvEndGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.58"/>
+
+
+    <android.support.constraint.Guideline
+            android:id="@+id/userNameEdTopGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.42"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/userEdStartGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/userEdEndGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95"/>
+
+
+    <EditText
+            android:id="@+id/userNameEd"
+            android:fontFamily="serif-monospace"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="textEmailAddress"
+            android:hint="User Name"
+            app:layout_constraintDimensionRatio="H, 320:48"
+
+            app:layout_constraintTop_toTopOf="@id/userNameEdTopGl"
+            app:layout_constraintEnd_toEndOf="@id/userEdEndGl"
+            app:layout_constraintStart_toStartOf="@id/userEdStartGl"/>
+
+    <EditText
+            android:id="@+id/userPasswordEd"
+            android:fontFamily="serif-monospace"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            app:layout_constraintDimensionRatio="H, 320:48"
+            app:layout_constraintTop_toBottomOf="@+id/userNameEd"
+            app:layout_constraintEnd_toEndOf="@id/userEdEndGl"
+            app:layout_constraintStart_toStartOf="@id/userEdStartGl"/>
+
+
+    <Button
+            android:id="@+id/loginBt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="login"
+            app:layout_constraintDimensionRatio="H,320:48"
+
+            app:layout_constraintTop_toBottomOf="@+id/userPasswordEd"
+            app:layout_constraintStart_toStartOf="@id/userEdStartGl"
+            app:layout_constraintEnd_toEndOf="@id/userEdEndGl"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/checkIvStartGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35"/>
+
+</android.support.constraint.ConstraintLayout>
