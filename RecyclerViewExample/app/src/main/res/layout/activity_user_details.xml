@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_gray_bg">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_profile_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cv_profile_2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+            <ImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_profile"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_user"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_user_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginTop="4dp"
+                    android:paddingBottom="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_user_name"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_profile_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_profile_1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textSize="20sp"
+                    android:gravity="start"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/street_name"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_address"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="4dp"
+                    app:layout_constraintStart_toEndOf="@id/lbl_street"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/lbl_street"
+                    app:layout_constraintBottom_toBottomOf="@id/lbl_street"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_street"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/txt_street"
+                    app:layout_constraintLeft_toRightOf="@id/lbl_street"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/lbl_city"
+                    app:layout_constraintBottom_toBottomOf="@id/lbl_city"
+                    app:layout_constraintHorizontal_bias="0"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_city"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/txt_street"
+                    app:layout_constraintTop_toTopOf="@id/lbl_state"
+            app:layout_constraintBottom_toBottomOf="@id/lbl_state"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post_code"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_state"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_pin_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="@id/lbl_pin"
+                    app:layout_constraintBottom_toBottomOf="@id/lbl_pin"
+                    app:layout_constraintStart_toStartOf="@id/txt_street"
+                    app:layout_constraintRight_toRightOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_profile_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_profile_2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_no_of_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_of_followers"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_no_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/na"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="4dp"
+                    app:layout_constraintLeft_toRightOf="@id/lbl_no_of_followers"
+                    app:layout_constraintTop_toTopOf="@id/lbl_no_of_followers"
+                    app:layout_constraintBottom_toBottomOf="@id/lbl_no_of_followers"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
